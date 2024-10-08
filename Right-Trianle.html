@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Right Angle Trianle</title>
+</head>
+
+<body>
+    <script>
+        let num = prompt("Enter the number of rows");
+        function rt_tri(n) {
+            for (let i = 0; i <= n; i++) {
+                for (let j = 0; j < i; j++) {
+                    document.write("*");
+                }
+                document.write("<br>");
+            }
+
+        }
+
+        rt_tri(num)
+    </script>
+</body>
+
+</html>

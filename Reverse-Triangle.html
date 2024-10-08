@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-size: xx-large;
+        }
+    </style>
+</head>
+
+<body>
+
+    <label for="rows">Enter the Number of Rows</label><input type="number" id="rows"><br>
+    <input type="button" onclick="rev_tri()" value="submit">
+    <br>
+
+    <script>
+        let i, j, k, l;
+        function rev_tri() {
+            let n = document.getElementById("rows").value;
+            for (i = n; i >= 1; i--) {
+                for (k = 1; k <= n - i; k++) {
+                    document.write("&nbsp;&nbsp;")
+                }
+                for (j = i; j >= 1; j--) {
+                    document.write("*");
+                }
+                for (l = i; l >= 2; l--) {
+                    document.write("*");
+                }
+                document.write("<br>");
+            }
+        }
+    </script>
+</body>
+
+</html>
