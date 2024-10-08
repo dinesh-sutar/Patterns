@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Function to print the zigzag pattern
+        function printZigZag(row, count) {
+
+            for (let i = 1; i <= count; i++) {
+                // Backward zigzag
+                for (let r = 1; r <= row; r++) {
+                    let line = '';
+                    for (let c = 1; c <= row; c++) {
+                        if (r === c) {
+                            line += r + ' ';
+                        } else {
+                            line += '&nbsp;&nbsp;'; // Use non-breaking spaces for alignment
+                        }
+                    }
+                    document.write(line + "<br>");
+                }
+
+                // Forward zigzag
+                for (let r = 1; r <= row; r++) {
+                    let line = '';
+                    for (let c = 1; c <= row; c++) {
+                        if (c <= (row + 1 - r)) {
+                            if (c === (row + 1 - r)) {
+                                line += r + ' ';
+                            } else {
+                                line += '&nbsp;&nbsp;'; // Use non-breaking spaces for alignment
+                            }
+                        }
+                    }
+                    document.write(line + "<br>");
+                }
+            }
+        }
+
+        // Take user input for number of rows and zigzag lines
+        const row = parseInt(prompt("Enter the number of characters in a line: "));
+        const count = parseInt(prompt("Enter the number of zigzag lines: "));
+
+        // Call the function to print the zigzag pattern
+        printZigZag(row, count);
+
+    </script>
+</body>
+
+</html>
