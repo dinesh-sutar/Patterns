@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function rt_tri_le(n) {
+            let i, j, k;
+            let charCode = 65; // ASCII code for 'A'
+
+            for (i = 1; i <= n; i++) {
+
+                for (j = 1; j <= i; j++) {
+                    document.write(String.fromCharCode(charCode));
+                    charCode++;
+                    if (charCode > 90) { // Loop back to 'A' after 'Z'
+                        charCode = 65;
+                    }
+                }
+                document.write("<br>");
+            }
+        }
+        let rew = prompt("Enter the number of rows");
+        rt_tri_le(rew);
+    </script>
+</body>
+
+</html>
